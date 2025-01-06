@@ -1,0 +1,21 @@
+#modalContent {
+  background-color: rgb(141, 140, 140); // Modal satura fona krāsa
+}
+
+@media (max-width: 768px) {
+  // Nodrošina, ka modālais saturs pareizi mērogojas
+  .modal-dialog {
+    max-width: 90%; // Maksimālais platums 90%
+    margin: 0 auto; // Centrē modālo dialogu
+  }
+
+  // Pievieno horizontālo ritināšanu tabulai
+  .table-container {
+    overflow-x: auto; // Horizontālā ritināšana
+    -webkit-overflow-scrolling: touch; // Gluda ritināšana uz skārienierīcēm
+  }
+
+  .table {
+    min-width: 600px; // Minimālais tabulas platums
+  }
+}

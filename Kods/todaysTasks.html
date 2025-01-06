@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todays Tasks</title>
+    <link rel="stylesheet" href="./static/css/todaysTasks.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header>
+        <div id="navbar-placeholder"></div>
+      </header>
+
+      <main>
+        <div class="container py-4">
+          <div class="container">
+            <button id="exportPdf" class="btn btn-primary mb-3">
+              Export Today's Tasks to PDF
+            </button>
+          </div>
+
+          <div class="accordion" id="taskAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#task1"
+                  aria-expanded="true"
+                  aria-controls="task1"
+                >
+                  <div class="d-flex align-items-center w-100">
+                    <div class="col-3">Jane Smith</div>
+                    <div class="col-3">Buddy</div>
+                    <div class="col-3">10:30 AM</div>
+                    <div class="col-3">Vaccination</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="task1" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        src="./static/images/blogimages/1.jpg"
+                        alt="Buddy Image"
+                        class="img-fluid rounded"
+                      />
+                    </div>
+                    <div class="col-md-9">
+                      <div class="row mb-3">
+                        <div class="col-md-4">
+                          <h6>Animal Info</h6>
+                          <p>
+                            Species: Dog <br />
+                            Age: 2 years <br />
+                            Breed: Beagle
+                          </p>
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Owner Info</h6>
+                          <p>Name: Jane Smith<br />Contact: (555) 987-6543</p>
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Appointment Notes</h6>
+                          <p>Administer rabies and distemper vaccines.</p>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion accordion-flush"
+                        id="pastVisitsAccordion1"
+                      >
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#pastVisits1"
+                              aria-expanded="false"
+                              aria-controls="pastVisits1"
+                            >
+                              Past Visits
+                            </button>
+                          </h2>
+                          <div
+                            id="pastVisits1"
+                            class="accordion-collapse collapse"
+                          >
+                            <div class="accordion-body">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <strong>08/12/2022:</strong> Annual Check-up -
+                                  <a href="#">Link to full details</a>
+                                </li>
+                                <li>
+                                  <strong>05/03/2022:</strong> Dental Cleaning -
+                                  <a href="#">Link to full details</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#task2"
+                  aria-expanded="true"
+                  aria-controls="task2"
+                >
+                  <div class="d-flex align-items-center w-100">
+                    <div class="col-3">Sam Wilson</div>
+                    <div class="col-3">Whiskers</div>
+                    <div class="col-3">11:15 AM</div>
+                    <div class="col-3">Check-Up</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="task2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        src="./static/images/blogimages/3.jpg"
+                        alt="Whiskers Image"
+                        class="img-fluid rounded"
+                      />
+                    </div>
+                    <div class="col-md-9">
+                      <div class="row mb-3">
+                        <div class="col-md-4">
+                          <h6>Animal Info</h6>
+                          <p>
+                            Species: Cat <br />
+                            Age: 3 years <br />
+                            Breed: Persian
+                          </p>
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Owner Info</h6>
+                          <p>Name: Sam Wilson<br />Contact: (555) 222-3344</p>
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Appointment Notes</h6>
+                          <p>Assess overall health and check weight gain.</p>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion accordion-flush"
+                        id="pastVisitsAccordion2"
+                      >
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#pastVisits2"
+                              aria-expanded="false"
+                              aria-controls="pastVisits2"
+                            >
+                              Past Visits
+                            </button>
+                          </h2>
+                          <div
+                            id="pastVisits2"
+                            class="accordion-collapse collapse"
+                          >
+                            <div class="accordion-body">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <strong>09/25/2022:</strong> Flea Treatment -
+                                  <a href="#">Link to full details</a>
+                                </li>
+                                <li>
+                                  <strong>03/15/2022:</strong> Spaying Surgery -
+                                  <a href="#">Link to full details</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#task3"
+                  aria-expanded="true"
+                  aria-controls="task3"
+                >
+                  <div class="d-flex align-items-center w-100">
+                    <div class="col-3">Alice Green</div>
+                    <div class="col-3">Nibbles</div>
+                    <div class="col-3">01:00 PM</div>
+                    <div class="col-3">Teeth Cleaning</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="task3" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        src="./static/images/blogimages/6.jpg"
+                        alt="Nibbles Image"
+                        class="img-fluid rounded"
+                      />
+                    </div>
+                    <div class="col-md-9">
+                      <div class="row mb-3">
+                        <div class="col-md-4">
+                          <h6>Animal Info</h6>
+                          <p>
+                            Species: Rabbit <br />
+                            Age: 1 year <br />
+                            Breed: Holland Lop
+                          </p>
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Owner Info</h6>
+                          <p>Name: Alice Green<br />Contact: (555) 777-8899</p>
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Appointment Notes</h6>
+                          <p>
+                            Perform routine teeth cleaning and check molar
+                            alignment.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion accordion-flush"
+                        id="pastVisitsAccordion3"
+                      >
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#pastVisits3"
+                              aria-expanded="false"
+                              aria-controls="pastVisits3"
+                            >
+                              Past Visits
+                            </button>
+                          </h2>
+                          <div
+                            id="pastVisits3"
+                            class="accordion-collapse collapse"
+                          >
+                            <div class="accordion-body">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <strong>10/05/2022:</strong> General Health
+                                  Check - <a href="#">Link to full details</a>
+                                </li>
+                                <li>
+                                  <strong>05/18/2022:</strong> Nail Trimming -
+                                  <a href="#">Link to full details</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="./static/js/script.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

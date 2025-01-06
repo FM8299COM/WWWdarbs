@@ -1,0 +1,22 @@
+.blog-card {
+  width: 100%;
+  height: 100%;
+  border: none; //Noņem robežas
+  transition: transform 0.2s; //Pievieno gludu animāciju kartes pārveidei
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card img {
+  height: 200px;
+  object-fit: cover; //Attēls aizpilda piešķirto vietu, neizstiepjoties nesamērīgi.
+}
+
+.blog-card .card-body {
+  flex-grow: 1;
+}
+
+//Kad pele tiek novietota virs kartes, tā tiek nedaudz palielināta.
+.blog-card:hover {
+  transform: scale(1.05);
+}

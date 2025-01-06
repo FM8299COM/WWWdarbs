@@ -1,0 +1,24 @@
+.container .accordion-item .accordion-button {
+  font-size: 1.1rem; // Pogas fonta izmērs
+  display: flex; // Flexbox izkārtojums
+  justify-content: space-between; // Elementu izkārtojums ar vietu starp tiem
+}
+
+.accordion-body img {
+  max-width: 100%; // Maksimālais platums 100%
+  height: auto; // Automātisks augstums
+  border-radius: 8px; // Noapaļoti stūri
+}
+
+.accordion-body h6 {
+  font-weight: bold; // Trekns fonts
+  margin-bottom: 0.5rem; // Apakšējā atstarpe
+}
+
+.accordion-body ul {
+  padding-left: 1rem; // Kreisā iekšējā atstarpe
+}
+
+.accordion-body ul li {
+  margin-bottom: 0.5rem; // Apakšējā atstarpe
+}

@@ -1,0 +1,121 @@
+$primary-color: #333;
+$navFooter-color: lightblue;
+$text-color: #2f2f2f;
+$font-stack: "Roboto", sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+
+  h1 {
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  p {
+    color: $primary-color;
+    font-weight: bold;
+  }
+}
+
+#blogCarousel .carousel-item {
+  padding: 20px 0; //Karuseļa vienības iekšējā atstarpe
+}
+
+.blog-card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  transition: transform 0.2s; // Pārejas efekts transformācijai
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  &:hover {
+    transform: scale(1.05); //Palielināšana, kad uzbrauc ar peli
+  }
+}
+
+
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
+
+  .blog-card {
+    img {
+      height: 200px;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+    }
+
+    .card-text {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .blog-card {
+    img {
+      height: 220px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .blog-card {
+    img {
+      height: 250px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+    }
+  }
+}

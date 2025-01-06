@@ -1,0 +1,113 @@
+$navFooter-color: lightblue;
+$text-color: #2f2f2f;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+#footerContainer {
+  background-color: $navFooter-color;
+  text-align: center;
+  color: $text-color;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+footer img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-left: 15px;
+}
+
+footer ul li a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($text-color, 20%);
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer p {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  footer ul {
+    justify-content: center;
+  }
+
+  footer ul li {
+    margin-left: 8px;
+  }
+
+  footer img {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  footer ul li {
+    margin-left: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  footer {
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  footer ul li {
+    margin-left: 15px;
+  }
+}

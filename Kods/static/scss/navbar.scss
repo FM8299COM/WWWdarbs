@@ -1,0 +1,95 @@
+$navFooter-color: lightblue;
+$text-color: #2f2f2f;
+
+nav {
+  background-color: $navFooter-color; // Navigācijas joslas fona krāsa
+  padding: 10px 20px; // Navigācijas joslas iekšējā atstarpe
+
+  .navbar-brand {
+    color: $text-color; // Zīmola nosaukuma krāsa
+    font-weight: bold; // Zīmola nosaukuma biezums
+    font-size: 20px; // Zīmola nosaukuma fonta izmērs
+  }
+
+  .navbar-nav {
+    display: flex; // Flexbox izkārtojums navigācijas elementiem
+    flex-wrap: wrap; // Ietīšana, ja elementi nepietiek vietas
+    align-items: center; // Vertikāla centrēšana
+  }
+
+  .nav-link {
+    color: $text-color; // Navigācijas saites krāsa
+    text-decoration: none; // Noņem saites apakšsvītru
+    padding: 5px 10px; // Navigācijas saites iekšējā atstarpe
+
+    &:hover {
+      color: lighten($text-color, 20%); // Saite kļūst gaišāka, kad uz tās uzbrauc ar peli
+    }
+  }
+
+  .btn {
+    padding: 5px 15px; // Pogas iekšējā atstarpe
+    font-size: 14px;
+  }
+}
+
+.navbar-toggler {
+  border: none; // Noņem pogas apmali
+  &:focus {
+    outline: none; // Noņem fokusa kontūru
+    box-shadow: none; // Noņem fokusa ēnu
+  }
+  .navbar-toggler-icon {
+    width: 30px; // Ikonas platums
+    height: 30px; // Ikonas augstums
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 16px; // Zīmola nosaukuma fonta izmērs
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px; // Navigācijas saites fonta izmērs
+    margin: 0 8px; // Palielināta atstarpe starp saitēm
+  }
+
+  .btn {
+    font-size: 12px; // Pogas fonta izmērs
+    padding: 6px 12px; // Nedaudz palielināta iekšējā atstarpe
+    margin: 4px 6px; // Atstarpe starp pogām
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 18px; // Zīmola nosaukuma fonta izmērs
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 16px; // Navigācijas saites fonta izmērs
+    margin: 0 8px; // Atstarpe starp saitēm
+  }
+
+  .btn {
+    font-size: 13px; // Pogas fonta izmērs
+    padding: 5px 12px; // Iekšējā atstarpe
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-brand {
+    font-size: 20px; // Zīmola nosaukuma fonta izmērs
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 18px; // Navigācijas saites fonta izmērs
+    margin: 0 10px; // Atstarpe starp saitēm
+  }
+
+  .btn {
+    font-size: 14px; // Pogas fonta izmērs
+    padding: 6px 15px; // Iekšējā atstarpe
+  }
+}

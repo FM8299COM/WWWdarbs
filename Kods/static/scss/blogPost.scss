@@ -1,0 +1,20 @@
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.blog-image {
+  float: left; //Attēls tiek novietots pa kreisi no teksta
+  width: 40%; //Attēls aizņem 40% no vecākelementa platuma
+  margin-right: 1.5rem;
+  margin-bottom: 1rem; //Atstarpe zem attēla
+  border-radius: 8px; //Noapaļoti stūri
+}
+.blog-content {
+  text-align: justify; //Teksts tiek izlīdzināts pa abām pusēm
+}
+.blog-author {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 2rem;
+}

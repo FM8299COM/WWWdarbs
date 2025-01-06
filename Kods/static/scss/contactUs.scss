@@ -1,0 +1,132 @@
+body {
+  height: 100vh;
+}
+
+//Konteiners formai
+.raised-container {
+  width: 75%;
+  max-width: 600px;
+  padding: 2rem; //Samazināts iekšējais atstatums, lai novērstu pārāk lielas spraugas
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+#karte {
+  width: 100%;
+  height: 350px;
+  max-width: 100vw; //Karte nepārsniedz ekrāna platumu / viewport width
+  overflow: hidden; //Paslēpj jebkādu saturu, kas iziet ārpus konteinera
+  margin-bottom: 20px;
+}
+
+.container-fluid {
+  padding-left: 0; // Noņem abpusējās atstarpes
+  padding-right: 0;
+}
+
+main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  //Konteineris pielāgots mobilajām ierīcēm
+  .container {
+    padding: 1rem; //root em  / 16px  / https://www.sitepoint.com/understanding-and-using-rem-units-in-css/
+  }
+
+  .raised-container {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  //Formas lauki ir izvietoti vertikāli
+  .form-floating {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  //Karte pielāgota mazākiem ekrāniem
+  #karte {
+    height: 250px; //Samazināts augstums, lai labāk iekļautos.
+    margin-bottom: 20px; //Atstarpe starp karti un kājeni, lai vairs nepārplūd
+    max-width: 100vw; //Karte neaizpilda vairāk nekā ekrāns
+  }
+
+  //Kolonnu izvietojuma maiņa mobilajās ierīcēs
+  .login-column, .image-column {
+    width: 100% !important; //Kolonnas aizņem pilnu platumu 
+    padding: 0;
+  }
+
+  //Karte novietota zem formas 
+  .image-column {
+    order: 2; //Karte pārvietota uz otro pozīciju
+  }
+
+  //Atstarpe starp galveno saturu un kājeni
+  main {
+    margin-bottom: 50px; //Nodrošina pietiekamu vietu kājenei, lai viņa nepārplūst savā starpā
+  }
+}
+
+//Vidēja izmēra ekrāni 
+@media (max-width: 768px) {
+  .raised-container {
+    width: 85%; //Forma ir nedaudz platāka uz planšetdatoriem
+    padding: 2rem;
+  }
+
+  #karte {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .row.g-0 {
+    margin-bottom: 0; //Noņem apakšējo atstarpi
+  }
+
+  //Formas lauki ar lielāku atstarpi 
+  .form-floating {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  //Karte novietota zem formas
+  .image-column {
+    order: 2;
+  }
+}
+
+@media (min-width: 769px) {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .raised-container {
+    width: 60%;
+    padding: 2rem;
+  }
+
+  #karte {
+    height: 350px; 
+    margin-bottom: 20px;
+  }
+
+  .form-floating {
+    width: 100%;
+    margin-bottom: 1rem; 
+  }
+
+  .row.g-0 {
+    margin-bottom: 0;
+  }
+}
+

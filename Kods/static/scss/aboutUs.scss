@@ -1,0 +1,104 @@
+// Pievieno iekšējo atstarpi katram carousel-item, nodrošinot  vertikālo izkārtojumu.
+#employeeCarousel .carousel-item {
+  padding: 20px 0;
+}
+
+.employee-card {
+  width: 100%; // Kartes platums tiek iestatīts uz 100%, lai tā aizņemtu visu vecākelementa platumu.
+  height: 100%; // Kartes augstums tiek iestatīts uz 100%, lai tā aizņemtu visu vecākelementa augstumu.
+  border: none; // Noņem robežu, lai kartes dizains būtu tīrs.
+  transition: transform 0.2s; // Gluda pāreja, kad notiek pārveidošana.
+  display: flex; // Elastīgs izkārtojums, nodrošinot kolonnas izkārtojumu.
+  flex-direction: column; // Elementi tiek izvietoti kolonnā.
+  margin-bottom: 20px; // Kartēm tiek pievienota atstarpe no apakšas.
+
+  img {
+    height: 350px;
+    object-fit: cover; //Attēls tiek apgriezts un pielāgots, lai aizpildītu piešķirto vietu
+  }
+
+  //Galvenā kartes daļa ar tekstu, nodrošinot elastīgu augstumu un centrētu izkārtojumu
+  .card-body {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  //Kad pele tiek novietota virs kartes, tā tiek nedaudz palielināta.
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+//Pielāgo kartes dizainu mazākiem ekrāniem
+@media (max-width: 576px) {
+  #employeeCarousel .carousel-item {
+    padding: 15px 0;
+  }
+
+  .employee-card {
+    img {
+      height: 200px;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+    }
+
+    .card-text {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+//Pielāgo kartes dizainu vidējiem ekrāniem 
+@media (max-width: 768px) {
+  #employeeCarousel .carousel-item {
+    padding: 18px 0;
+  }
+
+  .employee-card {
+    img {
+      height: 220px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+//Pielāgo kartes dizainu lielākiem ekrāniem
+@media (min-width: 769px) {
+  #employeeCarousel .carousel-item {
+    padding: 20px 0;
+  }
+
+  .employee-card {
+    img {
+      height: 350px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+    }
+  }
+}
